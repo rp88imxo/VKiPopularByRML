@@ -126,7 +126,7 @@ namespace VKiPopularByRML
             grm_prm.Offset = off;
             grm_prm.GroupId = id;
             users = MainWindow.vkApi.Groups.GetMembers(grm_prm);
-
+            //123
         }
         public void RmlStartPop()
         {

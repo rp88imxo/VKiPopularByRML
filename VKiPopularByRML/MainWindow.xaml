@@ -1,0 +1,20 @@
+﻿<Window x:Name="Main_" x:Class="VKiPopularByRML.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VKiPopularByRML"
+        mc:Ignorable="d"
+        Title="Авторизация" Height="253.323" Width="189.329" ResizeMode="NoResize">
+    <Grid
+        >
+        <Button x:Name="Button" Content="Войти" HorizontalAlignment="Left" Margin="26,173,0,0" VerticalAlignment="Top" Width="120" IsEnabled="False" Click="Button_Click"/>
+        <Label Content="ID Приложения" HorizontalAlignment="Left" Margin="26,21,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TextBox" HorizontalAlignment="Left" Height="23" Margin="26,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged" Text="6263106" IsEnabled="False"/>
+        <TextBox x:Name="TextBoxEmail" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="26,96,0,0" TextChanged="TextBoxEmail_TextChanged" Text="89117195985"/>
+        <TextBox x:Name="TextBoxPass" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="26,145,0,0" TextChanged="TextBoxPass_TextChanged" Text="123ujif970"/>
+        <Label Content="Пароль" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="26,119,0,0" RenderTransformOrigin="0.561,-0.285"/>
+        <Label Content="Телефон" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="26,70,0,0"/>
+
+    </Grid>
+</Window>

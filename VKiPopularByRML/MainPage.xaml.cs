@@ -141,7 +141,7 @@ namespace VKiPopularByRML
             timer_autopost.Interval = new TimeSpan(0, 0, 1);
             tm = new TimeSpan(0, 5, 0);
             st_dt = DateTime.Now;
-
+            //newrepo
             timer_friend_add = new System.Windows.Threading.DispatcherTimer();
             timer_friend_add.Tick += new EventHandler(timer_friend_add_tick);
             timer_friend_add.Interval = new TimeSpan(0, 0, 1);

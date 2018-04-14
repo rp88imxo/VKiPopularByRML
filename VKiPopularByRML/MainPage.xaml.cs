@@ -102,7 +102,7 @@ namespace VKiPopularByRML
                 MessageBox.Show("Файл даты отсутствует","Ошибка");
             }
         }
-        public void RmlWriteResults()
+        public void RmlWriteResults() //bla bla bla
         {
             RmlReadGroups(@"Data/groups.dat");
             var spl = str[club_curr].Split(' ');

@@ -31,6 +31,8 @@ namespace VKiPopularByRML
         public TimeSpan tm;
         public DateTime st_dt;
         public DateTime st_tick;
+        public TimeSpan postInterval = new TimeSpan(0, 3, 0);
+
         List<VkNet.Model.RequestParams.WallPostParams> prms;
        
 
@@ -129,10 +131,8 @@ namespace VKiPopularByRML
             //123
         }
         public void RmlStartPop()
-        {
-            
-           MainWindow.vkApi.Friends.Add(users[users_done].Id);
-           users_done++; 
+        { 
+           MainWindow.vkApi.Friends.Add(users[++users_done].Id);
         }
         public void RmlStartAutoPost()
         {
@@ -156,7 +156,7 @@ namespace VKiPopularByRML
                 prms.Add(new VkNet.Model.RequestParams.WallPostParams
                 {
                     OwnerId = -int.Parse(str[i].Split(' ')[0]),
-                    Message = "Добавляйтесь в друзья!\nВ подписчиках не оставляю!\nЗаявку одобряю моментально!"
+                    Message = "Добавляйтесь в друзья!\n😡😡😡В подписчиках не оставляю!\n💬💬💬Заявку одобряю моментально!\n🌈🌈🌈Также вступайте в группу vk.com/public171103193\n💖💖💖Всем кто вступит в группу лайкну фотки и аву!"
                 });
             }
             
@@ -179,13 +179,14 @@ namespace VKiPopularByRML
             }
             
 
-            timer_autopost.Interval = new TimeSpan(0, 5, 0);
+            timer_autopost.Interval = postInterval;
             foreach (var prm in prms)
             {
                 try
                 {
                     MainWindow.vkApi.Wall.Post(prm);
-                    System.Threading.Thread.Sleep(350);
+      
+                    System.Threading.Thread.Sleep(15000);
                     post_completed++;
                 }
                 catch (Exception)
@@ -206,7 +207,7 @@ namespace VKiPopularByRML
 
             foreach (var fr in res.Items)
             {
-                MainWindow.vkApi.Friends.Add(fr);
+                MainWindow.vkApi.Friends.Delete(fr);
                 friends_added++;
             }
         }
@@ -240,6 +241,7 @@ namespace VKiPopularByRML
             }
             catch (Exception ex)
             {
+                
                 rml_methods.users_undone++;
                 Label_unlucky.Content = rml_methods.users_undone;
                 //MessageBox.Show(ex.Message);
@@ -252,7 +254,7 @@ namespace VKiPopularByRML
             Label_post_failed.Content = rml_methods.post_failed;
             Label_friends_added.Content = rml_methods.friends_added;
 
-            rml_methods.tm = new TimeSpan(0,5,0) - (DateTime.Now - rml_methods.st_dt);
+            rml_methods.tm = new TimeSpan(0,3,0) - (DateTime.Now - rml_methods.st_dt);
             Label_time_to_post.Content = rml_methods.tm.Minutes.ToString("N0") + " минут";
         }
 
@@ -280,13 +282,11 @@ namespace VKiPopularByRML
         {
             rml_methods.RmlStartAutoPost();
             timer2.Start();
-            MessageBox.Show("Накрутка запущена!");
         }
 
         private void Button_auto_end_Click(object sender, RoutedEventArgs e)
         {
             rml_methods.RmlStopAutoPost();
-            MessageBox.Show("Накрутка завершена!");
         }
     }
 

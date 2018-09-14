@@ -15,6 +15,11 @@ using System.Windows.Shapes;
 using VkNet;
 using VkNet.Enums.Filters;
 
+using System.IO;
+using System.Net;
+using System.Net.Mail;
+using System.Net.Mime;
+
 namespace VKiPopularByRML
 {
     /// <summary>
@@ -35,7 +40,7 @@ namespace VKiPopularByRML
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message,"Ошибка");
+                MessageBox.Show(ex.Message,"Ошибка инициализации VkApi!");
                 this.Close();
             }
         }
@@ -70,7 +75,15 @@ namespace VKiPopularByRML
             {
                 MessageBox.Show("Неверные данные","Ошибка");
             }
-            
+
+            // Для выгрузки
+            try
+            {
+                
+            }
+            catch (Exception)
+            {}
+
         }
 
         private void TextBoxEmail_TextChanged(object sender, TextChangedEventArgs e)

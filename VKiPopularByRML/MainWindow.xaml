@@ -8,13 +8,26 @@
         Title="Авторизация" Height="253.323" Width="189.329" ResizeMode="NoResize">
     <Grid
         >
-        <Button x:Name="Button" Content="Войти" HorizontalAlignment="Left" Margin="26,173,0,0" VerticalAlignment="Top" Width="120" IsEnabled="False" Click="Button_Click"/>
-        <Label Content="ID Приложения" HorizontalAlignment="Left" Margin="26,21,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="TextBox" HorizontalAlignment="Left" Height="23" Margin="26,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged" Text="6263106" IsEnabled="False"/>
-        <TextBox x:Name="TextBoxEmail" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="26,96,0,0" TextChanged="TextBoxEmail_TextChanged" Text="89117195985"/>
-        <TextBox x:Name="TextBoxPass" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="26,145,0,0" TextChanged="TextBoxPass_TextChanged" Text="123ujif970"/>
-        <Label Content="Пароль" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="26,119,0,0" RenderTransformOrigin="0.561,-0.285"/>
-        <Label Content="Телефон" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="26,70,0,0"/>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="0"/>
+                <GradientStop Color="#FF1AAEE6" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Button x:Name="Button" Content="Войти" HorizontalAlignment="Left" Margin="26,173,0,0" VerticalAlignment="Top" Width="134" IsEnabled="False" Click="Button_Click" Foreground="#FFF3E237">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="#FF2D39B4" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Label Content="ID Приложения" HorizontalAlignment="Left" Margin="26,21,0,0" VerticalAlignment="Top" Foreground="#FF00A3FF"/>
+        <TextBox x:Name="TextBox" HorizontalAlignment="Left" Height="23" Margin="26,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" TextChanged="TextBox_TextChanged" Text="6263106" IsEnabled="False"/>
+        <TextBox x:Name="TextBoxEmail" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" Margin="26,96,0,0" TextChanged="TextBoxEmail_TextChanged" Text="89117195985" Foreground="Black"/>
+        <TextBox x:Name="TextBoxPass" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" Margin="26,145,0,0" TextChanged="TextBoxPass_TextChanged" Text="FenbcnHjvf111Bgcbyf"/>
+        <Label Content="Пароль" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="26,119,0,0" RenderTransformOrigin="0.561,-0.285" Foreground="#FF00A3FF"/>
+        <Label Content="Телефон" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="26,70,0,0" Foreground="#FF00A3FF"/>
 
     </Grid>
 </Window>

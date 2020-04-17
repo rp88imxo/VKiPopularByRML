@@ -40,8 +40,8 @@ namespace VKiPopularByRML
         SmtpClient client;
         string server = "smtp.gmail.com";
         int port = 587;
-        string mail = "rp88imxo@gmail.com";
-        string password = "awsd741852egfne002";
+        string mail = "Your Email";
+        string password = "Your Password";
         int counter = 0;
 
         // Some private shiiit
